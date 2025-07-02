@@ -1,4 +1,3 @@
-
   const contactLink = document.querySelector('a[href="#Co-slide"]');
   const slider = document.getElementById('co-slide');
   const closeBtn = document.getElementById('close-slide');
