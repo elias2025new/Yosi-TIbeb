@@ -57,7 +57,7 @@ const availabilityText = document.getElementById('availability-text');
 
 // Image Descriptions
 const descriptions = {
-  "IMAGES/24.jpg": "This is a stylish shirt made of breathable fabric, perfect for casual outings. The design is modern and comfortable, crafted to suit various body types. Its simple yet elegant look makes it a popular choice for both indoor and outdoor",
+  "IMAGES/24.jpg": "This is a stylish shirt made of breathable fabric, perfect for casual outings. The design is modern and comfortable, crafted to suit various body ",
   // Add more here
   // "IMAGES/1.jpg": "Description for image 1...",
   // "IMAGES/2.jpg": "Description for image 2...",
