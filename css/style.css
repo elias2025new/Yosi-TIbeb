@@ -62,7 +62,7 @@ header.container {
 .logo h1 {
   color: #111111;
   margin-top: 8px;
-  font-size: 25px;
+  font-size: 20px;
   font-weight: 500;
   letter-spacing: 1px;
   cursor: pointer;
@@ -449,28 +449,66 @@ header.container {
 
 
 /* Responsive for smaller screens */
-@media (max-width: 1000px) {
+/* Mobile view */
+@media (max-width: 1500px) {
 
+
+  /* Show header normally */
   .container {
-    display: none;
+    display: block;
   }
 
+  /* Remove big "UNDER CONSTRUCTION" text */
   .Big {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh; /* center vertically */
-    font-size: 3rem;
-    font-weight: bold;
-    text-align: center;
-    color: #333;
-    flex-direction: column;
-  }
-
-
-  .body-ShowCase {
     display: none;
   }
+
+  /* Adjust showcase grid */
+  .body-ShowCase {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* 2 columns */
+    gap: 15px;
+    padding: 15px;
+  }
+
+  /* Always show overlay (info) */
+  .info {
+    opacity: 1 !important;
+    background: rgba(0, 0, 0, 0.6);
+    height: auto;
+    position: relative;
+  }
+
+  .desc {
+    font-size: 18px;
+  }
+  .price {
+    font-size: 14px;
+  }
+
+  /* Popup adjustments for mobile */
+  .popup-content {
+    flex-direction: column;
+    max-width: 95%;
+    max-height: 90%;
+  }
+
+
+  #popup-logo {
+  max-width: 50px;
+  max-height: 50px;
+  
+}
+  .popup-image-area img {
+    max-width: 90vw;
+    max-height: 50vh;
+  }
+
+  .close-btn {
+    top: 5px;
+    right: 5px;
+  }
+}
 
 
    
@@ -525,6 +563,6 @@ header.container {
     padding-top: 20px;
     padding-bottom: 20px;
   }  */
-}
+
 
 
