@@ -487,11 +487,6 @@ header.container {
   }
 
   /* Popup adjustments for mobile */
-  .popup-content {
-    flex-direction: column;
-    max-width: 95%;
-    max-height: 90%;
-  }
 
 
   #popup-logo {
@@ -499,9 +494,18 @@ header.container {
   max-height: 50px;
   
 }
+
+  .popup-content {
+    flex-direction: column;
+    max-width: 95%;
+    max-height: 90%;
+  }
+
   .popup-image-area img {
-    max-width: 90vw;
+     max-width: 100%;
+    height: auto;
     max-height: 50vh;
+    object-fit: contain;
   }
 
   .close-btn {
