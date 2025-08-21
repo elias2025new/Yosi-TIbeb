@@ -112,53 +112,72 @@ header.container {
 
 
 #close-slide {
-  font-style: italic;
-  background: #333;
-  color: #fff;
+  background: #ef4444;
   border: none;
-  padding: 8px 15px;
+  padding: 8px 14px;
+  color: white;
+  font-weight: 600;
+  border-radius: 8px;
   cursor: pointer;
-  margin-bottom: 20px;
+  float: right;
+  transition: 0.3s;
+}
+#close-slide:hover {
+  background: #dc2626;
+  transform: scale(1.05);
 }
 
-#close-slide:hover{
-  background-color: rgba(128, 0, 128, 0.288);
+/* Headings */
+#co-slide h2 {
+  margin-top: 2rem;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #38bdf8;
+  border-bottom: 2px solid #38bdf8;
+  padding-bottom: 0.5rem;
 }
 
-#co-slide {
-  display: flex;
-  flex-direction: column;
-  align-items: start;
-  gap: 12px;
-  padding: 20px;
-  /* add other styling like width, position, bg-color as needed */
+/* Paragraph labels */
+#co-slide p {
+  margin: 1.5rem 0 0.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #cbd5e1;
 }
 
-#co-slide img {
-   width: 35px;
-  margin-bottom: -5px;
-  margin-right: 15px;
-  padding: 2px;
-}
-
+/* Links */
 #co-slide a {
   display: flex;
   align-items: center;
+  gap: 10px;
   text-decoration: none;
-  color: rgba(128, 0, 128, 0.842);
+  background: #1e293b;
+  padding: 10px 12px;
+  margin: 8px 0;
+  border-radius: 10px;
+  color: #f8fafc;
+  font-weight: 500;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
 }
 
+/* Hover effect */
 #co-slide a:hover {
-  color: purple;
+  background: #38bdf8;
+  color: #0f172a;
+  transform: translateX(5px) scale(1.02);
+  box-shadow: 0 4px 12px rgba(56, 189, 248, 0.6);
 }
 
-#co-slide .phone{
-  color:rgba(128, 0, 128, 0.842);
-  text-decoration: none;
+/* Icons */
+#co-slide a img {
+  width: 25px;
+  height: 25px;
+  filter: brightness(0) invert(1);
+  transition: 0.3s;
 }
-
-#co-slide .phone:hover {
-  color: purple;
+#co-slide a:hover img {
+  filter: brightness(1) invert(0);
 }
 
 .phone img {
