@@ -133,7 +133,7 @@ addToCartBtns.forEach(btn => {
 
     // Visual feedback
     btn.textContent = 'Added!';
-    btn.style.background = 'linear-gradient(135deg, #10b981, #059669)';
+    btn.style.background = 'linear-gradient(135deg, #4a7c59, #3a6146)';
 
     setTimeout(() => {
       btn.textContent = 'Add to Cart';
