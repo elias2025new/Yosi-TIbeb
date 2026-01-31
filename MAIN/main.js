@@ -27,14 +27,21 @@ document.addEventListener('click', (e) => {
 });
 
 // ===== CONTACT SLIDER =====
-const contactLink = document.querySelector('a[href="#Co-slide"]');
+const contactLinks = document.querySelectorAll('a[href="#Co-slide"]');
 const slider = document.getElementById('co-slide');
 const closeSlideBtn = document.getElementById('close-slide');
 
-if (contactLink && slider) {
-  contactLink.addEventListener('click', function (e) {
-    e.preventDefault();
-    slider.classList.add('active');
+if (contactLinks.length > 0 && slider) {
+  contactLinks.forEach(link => {
+    link.addEventListener('click', function (e) {
+      e.preventDefault();
+      slider.classList.add('active');
+
+      // Close mobile menu if open
+      if (mobileMenu && mobileMenu.classList.contains('active')) {
+        mobileMenu.classList.remove('active');
+      }
+    });
   });
 }
 
@@ -46,10 +53,15 @@ if (closeSlideBtn && slider) {
 
 // Close slider when clicking outside
 window.addEventListener('click', function (e) {
-  if (slider && slider.classList.contains('active') &&
-    !slider.contains(e.target) &&
-    e.target !== contactLink) {
-    slider.classList.remove('active');
+  if (slider && slider.classList.contains('active')) {
+    let isContactLink = false;
+    contactLinks.forEach(link => {
+      if (link.contains(e.target)) isContactLink = true;
+    });
+
+    if (!slider.contains(e.target) && !isContactLink) {
+      slider.classList.remove('active');
+    }
   }
 });
 
